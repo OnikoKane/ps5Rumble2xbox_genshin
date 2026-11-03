@@ -1,0 +1,7 @@
+﻿bin/
+obj/
+_build_tmp/
+*.exe
+*.dll
+*.pdb
+*.user
