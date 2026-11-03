@@ -1,6 +1,6 @@
 # ps5Rumble2xbox_genshin — 调研与踩坑记录
 
-> **一句话结论：在原神 PC 版上，把 Xbox 手柄伪装成 DualSense 去获取「PS5 原生震动（HD 触觉）」是不可行的——因为原神 PC 版根本不向 DualSense 发送触觉数据。** 本仓库记录完整调研、实测证据与踩坑，供他人避坑。
+> **结论：在原神 PC 版上，把 Xbox 手柄伪装成 DualSense 去获取「PS5 原生震动（HD 触觉）」是不可行的——因为原神 PC 版根本不向 DualSense 发送触觉数据。** 本仓库记录完整调研、实测证据与踩坑，供他人避坑。
 
 **English TL;DR:** Genshin Impact on PC does **not** emit DualSense HD haptics (the 4-channel controller audio's ch3/4 stay silent). Its "DualSense support" is only button glyphs / UI. We built a full virtual-DualSense pipeline and verified every stage (virtual USB composite DualSense, input mapping, real Xbox 4-motor rumble, HidHide hiding the physical Xbox, and a WASAPI audio→motor engine), but there is simply **no haptic data to convert**. Sound-to-vibration does produce rumble, but it is semantically wrong (music/voices trigger it) and introduces audio-routing/volume issues. Project discontinued; this repo is the post-mortem to save others the trouble.
 
